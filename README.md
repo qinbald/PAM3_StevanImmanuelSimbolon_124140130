@@ -15,14 +15,23 @@ Komponen yang digunakan dalam aplikasi ini meliputi: `Column`, `Row`, `Box`, `Ca
 ## Screenshot
 
 ### Android
-![Screenshot Android](screenshot_android.png) <!-- Tambahkan screenshot Android di root project dengan nama file screenshot_android.png -->
-
-### Desktop
-![Screenshot Desktop](screenshot_desktop.png) <!-- Tambahkan screenshot Desktop di root project dengan nama file screenshot_desktop.png -->
+![Screenshot Android](assets/profil.jpeg)
 
 ---
 
-### Menjalankan Aplikasi Lokal
+## Fitur Tambahan (Bonus)
+Aplikasi ini sudah mengimplementasikan `AnimatedVisibility` pada bagian tombol Follow. Saat tombol diklik, pesan konfirmasi akan muncul dengan animasi *fade in* dan *fade out*.
 
-- Android app: `./gradlew :androidApp:assembleDebug` (lalu install apk) atau jalankan via IDE.
-- Desktop app: `./gradlew :desktopApp:run`
+## Cara Menjalankan Aplikasi
+
+**Melalui Android Studio:**
+1. Buka project di Android Studio dan biarkan Gradle melakukan *sync*.
+2. Pada menu *Run Configuration* di bagian atas, pilih "androidApp".
+3. Klik tombol Run.
+
+**Melalui Terminal:**
+
+- Mem-build APK Android (hasil build ada di `androidApp/build/outputs/apk/debug/`):
+  ```bash
+  ./gradlew :androidApp:assembleDebug
+  ```

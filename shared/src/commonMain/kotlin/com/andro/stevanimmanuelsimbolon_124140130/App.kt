@@ -1,5 +1,8 @@
 package com.andro.stevanimmanuelsimbolon_124140130
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -20,9 +23,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 import stevanimmanuelsimbolon_124140130.shared.generated.resources.Res
 import stevanimmanuelsimbolon_124140130.shared.generated.resources.compose_multiplatform
+import stevanimmanuelsimbolon_124140130.shared.generated.resources.foto_profil
 
 @Composable
 @Preview
@@ -61,7 +65,7 @@ fun ProfileCard(modifier: Modifier = Modifier) {
             // 2. Reusable Composable: ProfileHeader
             ProfileHeader(
                 name = "Stevan Immanuel Simbolon",
-                bio = "Mobile Developer Enthusiast | Kotlin Multiplatform Learner\nBuilding awesome apps with compose."
+                bio = "WEB Dveloper"
             )
             
             Spacer(modifier = Modifier.height(24.dp))
@@ -71,6 +75,25 @@ fun ProfileCard(modifier: Modifier = Modifier) {
                 modifier = Modifier.fillMaxWidth(0.6f)
             ) {
                 Text(if (isFollowing) "Following" else "Follow")
+            }
+
+            AnimatedVisibility(
+                visible = isFollowing,
+                enter = androidx.compose.animation.fadeIn() + androidx.compose.animation.expandVertically(),
+                exit = androidx.compose.animation.fadeOut() + androidx.compose.animation.shrinkVertically()
+            ) {
+                Card(
+                    modifier = Modifier.padding(top = 16.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
+                ) {
+                    Text(
+                        text = "🎉 Terima kasih sudah mengikuti!",
+                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(16.dp)
+                    )
+                }
             }
             
             Spacer(modifier = Modifier.height(32.dp))
@@ -84,17 +107,17 @@ fun ProfileCard(modifier: Modifier = Modifier) {
                 InfoItem(
                     icon = Icons.Default.Email,
                     title = "Email",
-                    value = "stevanimmanuel@example.com"
+                    value = "stevan.124140130@student.itera.ac.id"
                 )
                 InfoItem(
                     icon = Icons.Default.Phone,
-                    title = "Phone",
-                    value = "+62 812 3456 7890"
+                    title = "Nomor HP",
+                    value = "082120908009"
                 )
                 InfoItem(
                     icon = Icons.Default.LocationOn,
-                    title = "Location",
-                    value = "Yogyakarta, Indonesia"
+                    title = "Lokasi",
+                    value = "lampung selatan, sumatera"
                 )
             }
         }
@@ -115,7 +138,7 @@ fun ProfileHeader(name: String, bio: String) {
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(Res.drawable.compose_multiplatform),
+                painter = painterResource(Res.drawable.foto_profil),
                 contentDescription = "Profile Picture",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
