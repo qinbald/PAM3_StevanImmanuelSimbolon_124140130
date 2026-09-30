@@ -1,6 +1,5 @@
-**NAMA :** Stevan Immanuel Simbolon
-
-**NIM  :**124140130
+- **Nama** : Stevan Immanuel Simbolon
+- **NIM**  : 124140130
 
 # My Profile App
 
