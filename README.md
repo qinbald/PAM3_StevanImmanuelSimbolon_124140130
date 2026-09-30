@@ -1,3 +1,6 @@
+**NAMA :**Stevan Immanuel Simbolon
+**NIM  :**124140130
+
 # My Profile App
 
 Aplikasi "My Profile App" yang dibangun menggunakan **Kotlin Multiplatform** dan **Compose Multiplatform**. Aplikasi ini menampilkan halaman profil yang berisi:
@@ -20,7 +23,7 @@ Komponen yang digunakan dalam aplikasi ini meliputi: `Column`, `Row`, `Box`, `Ca
 ---
 
 ## Fitur Tambahan (Bonus)
-Aplikasi ini sudah mengimplementasikan `AnimatedVisibility` pada bagian tombol Follow. Saat tombol diklik, pesan konfirmasi akan muncul dengan animasi *fade in* dan *fade out*.
+Aplikasi ini sudah mengimplementasikan AnimatedVisibility pada bagian tombol Follow. Saat tombol diklik, pesan konfirmasi akan muncul dengan animasi *fade in* dan *fade out*.
 
 ## Cara Menjalankan Aplikasi
 
