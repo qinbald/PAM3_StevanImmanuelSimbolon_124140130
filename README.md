@@ -12,7 +12,7 @@ Terdapat 3 Composable Functions yang reusable:
 1. `ProfileCard`: Membungkus konten profil dengan Card UI.
 2. `ProfileHeader`: Menampilkan foto profil melingkar, nama, dan deskripsi/bio.
 3. `InfoItem`: Menampilkan baris informasi beserta icon.
-
+s
 Komponen yang digunakan dalam aplikasi ini meliputi: `Column`, `Row`, `Box`, `Card`, `Text`, `Button`, `Image`, dan `Icon`.
 
 ## Screenshot
